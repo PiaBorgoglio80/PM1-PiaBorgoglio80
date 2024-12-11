@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF5F8; /* Fondo rosado claro */
+    color: #4A4A4A; /* Gris oscuro */
+    line-height: 1.6;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    background-color: #D88BB0; /* Rosa fuerte */
+    color: white;
+    padding: 20px 0;
+    border-bottom: 4px solid #A774A6; /* Morado */
+}
+
+header .tit {
+    font-family: 'Georgia', cursive; /* Letra cursiva */
+    font-size: 2.5rem;
+}
+
+header .subtt {
+    font-size: 1.2rem;
+    color: #FCE4EC; /* Rosa claro */
+}
+
+main {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Sobre Mí */
+.container {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sobreMi {
+    color: #A774A6; /* Morado */
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hrColorNegro {
+    border: 0;
+    border-top: 2px solid #A774A6; /* Morado */
+    margin: 15px 0;
+}
+
+/* Tecnologías y Actividades */
+.containerTecActi {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Para adaptarse a pantallas pequeñas */
+}
+
+.containerTecActi .container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+}
+
+/* Formularios */
+.formulario label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #6A1B9A; /* Púrpura */
+}
+
+.formulario input[type="text"],
+.formulario input[type="url"],
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #A774A6; /* Morado */
+    border-radius: 5px;
+}
+
+.formulario input[type="submit"] {
+    background-color: #D88BB0; /* Rosa fuerte */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #A774A6; /* Morado */
+}
+
+/* Tarjetas */
+.containerTarjetas {
+    margin-top: 20px;
+}
+
+.containerTarjetas h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #A774A6;
+    margin-bottom: 20px;
+}
+
+.OrgDeTarj {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.OrgDeTarj div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.OrgDeTarj img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.OrgDeTarj h3 {
+    font-size: 1.4rem;
+    color: #6A1B9A; /* Púrpura */
+    margin-bottom: 10px;
+}
+
+.OrgDeTarj p {
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    line-height: 1.4;
+}
+
+.OrgDeTarj .x {
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    background-color: #FFF5F8; 
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+
+
+
+
+
