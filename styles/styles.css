@@ -1,43 +1,44 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo Global */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFF5F8; /* Fondo rosado claro */
-    color: #4A4A4A; /* Gris oscuro */
+    background-color: #FFF5F8; 
+    color: #4A4A4A; 
     line-height: 1.6;
     padding: 10px;
 }
 
 header {
     text-align: center;
-    background-color: #D88BB0; /* Rosa fuerte */
+    background-color: #D88BB0; 
     color: white;
     padding: 20px 0;
-    border-bottom: 4px solid #A774A6; /* Morado */
+    border-bottom: 4px solid #A774A6; 
 }
 
 header .tit {
-    font-family: 'Georgia', cursive; /* Letra cursiva */
+    font-family: 'Georgia', cursive;
     font-size: 2.5rem;
 }
 
 header .subtt {
     font-size: 1.2rem;
-    color: #FCE4EC; /* Rosa claro */
+    color: #FCE4EC; 
 }
 
 main {
+    flex: 1;
     margin: 20px auto;
     max-width: 1200px;
 }
 
-/* Sobre Mí */
+
 .container {
     background-color: white;
     padding: 20px;
@@ -47,7 +48,7 @@ main {
 }
 
 .sobreMi {
-    color: #A774A6; /* Morado */
+    color: #A774A6; 
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 15px;
@@ -55,16 +56,16 @@ main {
 
 .hrColorNegro {
     border: 0;
-    border-top: 2px solid #A774A6; /* Morado */
+    border-top: 2px solid #A774A6;
     margin: 15px 0;
 }
 
-/* Tecnologías y Actividades */
+
 .containerTecActi {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap; /* Para adaptarse a pantallas pequeñas */
+    flex-wrap: wrap; 
 }
 
 .containerTecActi .container {
@@ -73,12 +74,12 @@ main {
     max-width: 48%;
 }
 
-/* Formularios */
+
 .formulario label {
     display: block;
     margin: 10px 0 5px;
     font-weight: bold;
-    color: #6A1B9A; /* Púrpura */
+    color: #6A1B9A; 
 }
 
 .formulario input[type="text"],
@@ -87,12 +88,12 @@ main {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #A774A6; /* Morado */
+    border: 1px solid #A774A6;
     border-radius: 5px;
 }
 
 .formulario input[type="submit"] {
-    background-color: #D88BB0; /* Rosa fuerte */
+    background-color: #D88BB0;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -101,10 +102,10 @@ main {
 }
 
 .formulario input[type="submit"]:hover {
-    background-color: #A774A6; /* Morado */
+    background-color: #A774A6; 
 }
 
-/* Tarjetas */
+
 .containerTarjetas {
     margin-top: 20px;
 }
@@ -142,7 +143,7 @@ main {
 
 .OrgDeTarj h3 {
     font-size: 1.4rem;
-    color: #6A1B9A; /* Púrpura */
+    color: #6A1B9A; 
     margin-bottom: 10px;
 }
 
@@ -167,7 +168,7 @@ body {
     background-color: #FFF5F8; 
     display: flex;
     flex-direction: column; 
-    min-height: 100vh; 
+
 }
 
 
