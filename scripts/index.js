@@ -1,3 +1,4 @@
+
 class Activity {
     constructor(id, title, description, imgURL) {
         this.id = id;
@@ -7,18 +8,19 @@ class Activity {
     }
 }
 
+
 class Repository {
     constructor() {
         this.activities = [];
         this.__id__ = 1;
     }
 
-    
+  
     getAllActivities() {
         return this.activities;
     }
 
-    
+   
     createActivity(title, description, imgURL) {
         const nuevaActividad = new Activity(
             this.__id__,
@@ -38,37 +40,65 @@ class Repository {
 }
 
 
-function createActivityCard(activity) {
-    
+const repository = new Repository();
+
+
+function convertToHTML(activity) {
     const { id, title, description, imgURL } = activity;
 
-   
-    const cardDiv = document.createElement('div');
-    const titleElement = document.createElement('h3');
-    const descriptionElement = document.createElement('p');
-    const imgElement = document.createElement('img');
-    const closeButton = document.createElement('span');
+    const div = document.createElement('div');
+    div.classList.add('actividad-tarjeta');
 
- 
-    titleElement.innerHTML = title;
-    descriptionElement.innerHTML = description;
-    imgElement.src = imgURL;
-    imgElement.alt = `Imagen de ${title}`;
-    closeButton.innerHTML = 'X';
+    const h3 = document.createElement('h3');
+    h3.innerHTML = title;
 
-    
-    cardDiv.classList.add('activity-card');
-    titleElement.classList.add('activity-title');
-    descriptionElement.classList.add('activity-description');
-    imgElement.classList.add('activity-img');
-    closeButton.classList.add('x');
+    const p = document.createElement('p');
+    p.innerHTML = description;
+
+    const img = document.createElement('img');
+    img.src = imgURL;
+    img.alt = `Imagen de ${title}`;
+
+    const span = document.createElement('span');
+    span.classList.add('x');
+    span.innerHTML = 'X';
+    span.onclick = () => handleDeleteActivity(id); 
 
     
-    cardDiv.appendChild(titleElement);
-    cardDiv.appendChild(closeButton);
-    cardDiv.appendChild(imgElement);
-    cardDiv.appendChild(descriptionElement);
+    div.appendChild(h3);
+    div.appendChild(span);
+    div.appendChild(img);
+    div.appendChild(p);
 
-    
-    return cardDiv;
+    return div;
 }
+
+
+function renderActivities() {
+ 
+    const container = document.querySelector('.OrgDeTarj');
+
+    
+    container.innerHTML = '';
+
+   
+    const activities = repository.getAllActivities();
+
+   
+    activities.forEach((activity) => {
+        const activityHTML = convertToHTML(activity);
+        container.appendChild(activityHTML);
+    });
+}
+
+
+function handleAddActivity(event) {
+    event.preventDefault();
+
+  
+    const titleInput = document.querySelector('#titulo');
+    const descriptionInput = document.querySelector('#descripcion');
+    const imgURLInput = document.querySelector('input[type="url"]');
+
+  
+
