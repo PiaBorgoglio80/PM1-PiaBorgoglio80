@@ -15,7 +15,7 @@ class Repository {
         this.__id__ = 1;
     }
 
-  
+    
     getAllActivities() {
         return this.activities;
     }
@@ -46,6 +46,7 @@ const repository = new Repository();
 function convertToHTML(activity) {
     const { id, title, description, imgURL } = activity;
 
+   
     const div = document.createElement('div');
     div.classList.add('actividad-tarjeta');
 
@@ -73,18 +74,17 @@ function convertToHTML(activity) {
     return div;
 }
 
-
 function renderActivities() {
- 
+   
     const container = document.querySelector('.OrgDeTarj');
 
     
     container.innerHTML = '';
 
-   
+    
     const activities = repository.getAllActivities();
 
-   
+    
     activities.forEach((activity) => {
         const activityHTML = convertToHTML(activity);
         container.appendChild(activityHTML);
@@ -93,12 +93,45 @@ function renderActivities() {
 
 
 function handleAddActivity(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
-  
+   
     const titleInput = document.querySelector('#titulo');
     const descriptionInput = document.querySelector('#descripcion');
     const imgURLInput = document.querySelector('input[type="url"]');
 
-  
+    
+    const title = titleInput.value;
+    const description = descriptionInput.value;
+    const imgURL = imgURLInput.value;
 
+    
+    if (!title || !description || !imgURL) {
+        alert('Por favor, complete todos los campos.');
+        return;
+    }
+
+    
+    repository.createActivity(title, description, imgURL);
+
+   
+    titleInput.value = '';
+    descriptionInput.value = '';
+    imgURLInput.value = '';
+
+    
+    renderActivities();
+}
+
+
+const form = document.querySelector('.formulario');
+form.addEventListener('submit', handleAddActivity);
+
+
+function handleDeleteActivity(id) {
+   
+    repository.deleteActivity(id);
+
+    
+    renderActivities();
+}
